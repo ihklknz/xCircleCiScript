@@ -3,7 +3,7 @@ echo "Downloading few Dependecies . . ."
 git clone --depth=1 $kernel_source $device_codename
 git clone --depth=1 https://github.com/xyz-prjkt/xRageTC-clang clang
 
-# Main 
+# Main
 KERNEL_NAME=$kernel_name # IMPORTANT ! Declare your kernel name
 KERNEL_ROOTDIR=$(pwd)/$device_codename # IMPORTANT ! Fill with your kernel source root directory.
 DEVICE_CODENAME=$device_codename # IMPORTANT ! Declare your device codename
