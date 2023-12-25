@@ -5,7 +5,7 @@ git clone --depth=1 https://github.com/negrroo/KernelSU -b main beryllium/Kernel
 git clone --depth=1 https://gitlab.com/XSans0/weebx-clang-15 clang
 
 # Main
-KERNEL_NAME=Cusss # IMPORTANT ! Declare your kernel name
+KERNEL_NAME=CusssMeledakBummah # IMPORTANT ! Declare your kernel name
 KERNEL_ROOTDIR=$(pwd)/beryllium # IMPORTANT ! Fill with your kernel source root directory.
 DEVICE_CODENAME=$beryllium # IMPORTANT ! Declare your device codename
 DEVICE_DEFCONFIG=vendor/xiaomi/beryllium_defconfig # IMPORTANT ! Declare your kernel source defconfig file here.
@@ -24,6 +24,7 @@ echo ================================================
 echo xKernelCompiler CircleCI Edition
 echo version : rev1.5 - gaspoll
 echo ================================================
+echo KERNEL NAME = ${KERNEL_NAME}
 echo BUILDER NAME = ${KBUILD_BUILD_USER}
 echo BUILDER HOSTNAME = ${KBUILD_BUILD_HOST}
 echo DEVICE_DEFCONFIG = ${DEVICE_DEFCONFIG}
@@ -41,7 +42,7 @@ function compile() {
         -d chat_id="$chat_id" \
         -d "disable_web_page_preview=true" \
         -d "parse_mode=html" \
-        -d text="<b>xKernelCompiler</b>%0ABUILDER NAME : <code>${KBUILD_BUILD_USER}</code>%0ABUILDER HOST : <code>${KBUILD_BUILD_HOST}</code>%0ADEVICE DEFCONFIG : <code>${DEVICE_DEFCONFIG}</code>%0ACLANG VERSION : <code>$(${CLANG_ROOTDIR}/bin/clang --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g')</code>%0ACLANG ROOTDIR : <code>${CLANG_ROOTDIR}</code>%0AKERNEL ROOTDIR : <code>${KERNEL_ROOTDIR}</code>"
+        -d text="<b>xKernelCompiler</b>%0AKERNEL NAME : <code>${KERNEL_NAME}</code>%0ABUILDER NAME : <code>${KBUILD_BUILD_USER}</code>%0ABUILDER HOST : <code>${KBUILD_BUILD_HOST}</code>%0ADEVICE DEFCONFIG : <code>${DEVICE_DEFCONFIG}</code>%0ACLANG VERSION : <code>$(${CLANG_ROOTDIR}/bin/clang --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g')</code>%0ACLANG ROOTDIR : <code>${CLANG_ROOTDIR}</code>%0AKERNEL ROOTDIR : <code>${KERNEL_ROOTDIR}</code>"
 
   cd ${KERNEL_ROOTDIR}
   make -j$(nproc) O=out ARCH=arm64 ${DEVICE_DEFCONFIG}
