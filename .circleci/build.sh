@@ -4,7 +4,7 @@ git clone --depth=1 https://github.com/ihklknz/kernel_xiaomi_sdm845 -b uvite-ker
 git clone --depth=1 https://github.com/xyz-prjkt/xRageTC-clang clang
 
 # Main
-KERNEL_NAME=$kernel_name # IMPORTANT ! Declare your kernel name
+KERNEL_NAME=Cusss # IMPORTANT ! Declare your kernel name
 KERNEL_ROOTDIR=$(pwd)/beryllium # IMPORTANT ! Fill with your kernel source root directory.
 DEVICE_CODENAME=$beryllium # IMPORTANT ! Declare your device codename
 DEVICE_DEFCONFIG=vendor/xiaomi/beryllium_defconfig # IMPORTANT ! Declare your kernel source defconfig file here.
