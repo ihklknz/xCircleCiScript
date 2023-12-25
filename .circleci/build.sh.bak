@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 echo "Downloading few Dependecies . . ."
 git clone --depth=1 https://github.com/ihklknz/kernel_xiaomi_sdm845 -b uvite-kernelSU beryllium
-git clone --depth=1 https://github.com/xyz-prjkt/xRageTC-clang clang
+git clone --depth=1 https://gitlab.com/XSans0/weebx-clang-15 clang
 
 # Main
 KERNEL_NAME=Cusss # IMPORTANT ! Declare your kernel name
