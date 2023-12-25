@@ -5,7 +5,7 @@ git clone --depth=1 https://github.com/negrroo/KernelSU -b main beryllium/Kernel
 git clone --depth=1 https://gitlab.com/XSans0/weebx-clang-15 clang
 
 # Main
-KERNEL_NAME=Cusss # IMPORTANT ! Declare your kernel name
+KERNEL_NAME=CusssMeledakBummah # IMPORTANT ! Declare your kernel name
 KERNEL_ROOTDIR=$(pwd)/beryllium # IMPORTANT ! Fill with your kernel source root directory.
 DEVICE_CODENAME=$beryllium # IMPORTANT ! Declare your device codename
 DEVICE_DEFCONFIG=vendor/xiaomi/beryllium_defconfig # IMPORTANT ! Declare your kernel source defconfig file here.
@@ -24,6 +24,7 @@ echo ================================================
 echo xKernelCompiler CircleCI Edition
 echo version : rev1.5 - gaspoll
 echo ================================================
+echo KERNEL NAME = ${KERNEL_NAME}
 echo BUILDER NAME = ${KBUILD_BUILD_USER}
 echo BUILDER HOSTNAME = ${KBUILD_BUILD_HOST}
 echo DEVICE_DEFCONFIG = ${DEVICE_DEFCONFIG}
@@ -82,7 +83,7 @@ function finerr() {
 # Zipping
 function zipping() {
     cd AnyKernel || exit 1
-    zip -r9 ${KERNEL_NAME}-${DEVICE_CODENAME}-${DATE}.zip *
+    zip -r9 ${KERNEL_NAME}${DEVICE_CODENAME}-${DATE}.zip *
     cd ..
 }
 check
