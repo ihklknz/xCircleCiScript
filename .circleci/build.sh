@@ -1,14 +1,13 @@
 #!/usr/bin/env bash
 echo "Downloading few Dependecies . . ."
-git clone --depth=1 https://github.com/tejas101k/kernel_xiaomi_sdm845 -b thirteen-KSU beryllium
-git clone --depth=1 https://github.com/tiann/KernelSU -b main beryllium/KernelSU
+git clone --depth=1 https://github.com/ihklknz/kernel_xiaomi_sdm845 -b uvite-kernelSU beryllium
 git clone --depth=1 https://gitlab.com/XSans0/weebx-clang-15 clang
 
 # Main
 KERNEL_NAME=CusssMeledakBummah # IMPORTANT ! Declare your kernel name
 KERNEL_ROOTDIR=$(pwd)/beryllium # IMPORTANT ! Fill with your kernel source root directory.
 DEVICE_CODENAME=$beryllium # IMPORTANT ! Declare your device codename
-DEVICE_DEFCONFIG=beryllium_defconfig # IMPORTANT ! Declare your kernel source defconfig file here.
+DEVICE_DEFCONFIG=vendor/xiaomi/beryllium_defconfig # IMPORTANT ! Declare your kernel source defconfig file here.
 CLANG_ROOTDIR=$(pwd)/clang # IMPORTANT! Put your clang directory here.
 export KBUILD_BUILD_USER=hklknz # Change with your own name or else.
 export KBUILD_BUILD_HOST=hklknzscape-ci # Change with your own hostname.
