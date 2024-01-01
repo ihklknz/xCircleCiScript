@@ -2,7 +2,7 @@
 echo "Downloading few Dependecies . . ."
 git clone --depth=1 https://github.com/ihklknz/kernel_xiaomi_sdm845 -b thirteen beryllium
 git clone --depth=1 https://github.com/tiann/KernelSU -b main beryllium/KernelSU
-git clone --depth=1 https://github.com/kdrag0n/proton-clang clang
+git clone --depth=1 https://gitlab.com/tejas101k/clang-weebx clang
 
 # Main
 KERNEL_NAME=CusssMeledakBummah # IMPORTANT ! Declare your kernel name
@@ -49,7 +49,8 @@ function compile() {
   make -j$(nproc) ARCH=arm64 O=out \
 	CC=${CLANG_ROOTDIR}/bin/clang \
 	CROSS_COMPILE=${CLANG_ROOTDIR}/bin/aarch64-linux-gnu- \
-	CROSS_COMPILE_ARM32=${CLANG_ROOTDIR}/bin/arm-linux-gnueabi-
+	CROSS_COMPILE_ARM32=${CLANG_ROOTDIR}/bin/arm-linux-gnueabi- \
+	KALLSYMS_EXTRA_PASS=1
 
    if ! [ -a "$IMAGE" ]; then
 	finerr
