@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 echo "Downloading few Dependecies . . ."
-git clone --depth=1 https://github.com/ihklknz/kernel_xiaomi_sdm845 -b thirteen beryllium
-git clone --depth=1 https://github.com/tiann/KernelSU -b main beryllium/KernelSU
+git clone --depth=1 https://github.com/ihklknz/kernel_xiaomi_sdm845-4.9 -b fourteen beryllium
 git clone --depth=1 https://github.com/kdrag0n/proton-clang clang
 
 # Main
