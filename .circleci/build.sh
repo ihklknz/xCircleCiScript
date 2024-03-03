@@ -2,7 +2,7 @@
 echo "Downloading few Dependecies . . ."
 git clone --depth=1 https://github.com/ihklknz/kernel_xiaomi_sdm845 -b thirteen beryllium
 git clone --depth=1 https://github.com/tiann/KernelSU -b main beryllium/KernelSU
-git clone --depth=1 https://gitlab.com/anandhan07/aosp-clang clang
+git clone --depth=1 https://github.com/kdrag0n/proton-clang clang
 
 # Main
 KERNEL_NAME=CusssMeledakBummah # IMPORTANT ! Declare your kernel name
