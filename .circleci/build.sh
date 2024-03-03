@@ -48,9 +48,8 @@ function compile() {
   make -j$(nproc) ARCH=arm64 O=out \
 	CC=${CLANG_ROOTDIR}/bin/clang \
 	CROSS_COMPILE=${CLANG_ROOTDIR}/bin/aarch64-linux-gnu- \
-	CROSS_COMPILE_ARM32=${CLANG_ROOTDIR}/bin/arm-linux-gnueabi- \
-	KALLSYMS_EXTRA_PASS=1
-
+	CROSS_COMPILE_ARM32=${CLANG_ROOTDIR}/bin/arm-linux-gnueabi-
+ 
    if ! [ -a "$IMAGE" ]; then
 	finerr
 	exit 1
