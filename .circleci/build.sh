@@ -2,6 +2,7 @@
 echo "Downloading few Dependecies . . ."
 git clone --depth=1 https://github.com/diphons/sdm845-419 -b main beryllium
 git clone --depth=1 https://github.com/kdrag0n/proton-clang clang
+git clone --depth=1 https://github.com/diphons/kernel_techpack_mi845 -b display beryllium/techpack/mi845
 
 # Main
 KERNEL_NAME=CusssMeledakBummah # IMPORTANT ! Declare your kernel name
